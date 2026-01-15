@@ -34,7 +34,7 @@ long max_pair_Wise(const vector<long>&numbers){
 
     int max_index2=-1;
     for(int j=0; j<n; ++j){
-        if((j!=max_index1)&&(max_index2==-1)||(numbers[j]>numbers[max_index2])){
+        if(j!=max_index1 && (max_index2==-1||numbers[j]>numbers[max_index2])){
             max_index2=j;
         }
     }
@@ -44,6 +44,7 @@ long max_pair_Wise(const vector<long>&numbers){
 
 int main() 
 {
+    /**
     while(true){
         int n = rand()%10 +2;
         cout<<n<<endl;
@@ -64,7 +65,7 @@ int main()
         else{
             cout<<"OK"<<endl;
         }
-    }
+    }**/
 
     int n;
     cin>>n;
